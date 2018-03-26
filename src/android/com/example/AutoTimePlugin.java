@@ -36,7 +36,7 @@ public class AutoTimePlugin extends CordovaPlugin {
       final PluginResult result = new PluginResult(PluginResult.Status.OK, (new Date()).toString());
       callbackContext.sendPluginResult(result);
     } else if(action.equals("autotime")) {
-      final PluginResult resultAutoTime = new PluginResult(PluginResult.Status.OK, Settings.Global.getInt(c.getContentResolver(), Settings.Global.AUTO_TIME, 0) == 1)
+      final PluginResult resultAutoTime = new PluginResult(PluginResult.Status.OK, Settings.Global.getInt(c.getContentResolver(), Settings.Global.AUTO_TIME, 0) == 1);
       callbackContext.sendPluginResult(resultAutoTime);
     }
     return true;
