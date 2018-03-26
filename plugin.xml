@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="my-cordova-plugin"
+    id="cordova-plugin-autotime"
     version="1.0.0">
-    <name>Cordova Plugin autotime</name>
+    <name>Cordova Plugin Autotime</name>
     <description></description>
     <license>MIT</license>
     <keywords></keywords>
