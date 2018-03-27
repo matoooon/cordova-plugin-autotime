@@ -14,7 +14,6 @@ import org.json.JSONException;
 
 import android.util.Log;
 
-import java.util.Date;
 import android.provider.Settings;
 
 public class AutoTimePlugin extends CordovaPlugin {
@@ -27,17 +26,12 @@ public class AutoTimePlugin extends CordovaPlugin {
   }
 
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-    if(action.equals("echo")) {
-      String phrase = args.getString(0);
-      // Echo back the first argument
-      Log.d(TAG, phrase);
-    } else if(action.equals("getDate")) {
-      // An example of returning data back to the web layer
-      final PluginResult result = new PluginResult(PluginResult.Status.OK, (new Date()).toString());
-      callbackContext.sendPluginResult(result);
-    } else if(action.equals("autotime")) {
+    if(action.equals("autotime")) {
       final PluginResult resultAutoTime = new PluginResult(PluginResult.Status.OK, Settings.Global.getInt(cordova.getActivity().getContentResolver(), Settings.Global.AUTO_TIME, 0) == 1);
       callbackContext.sendPluginResult(resultAutoTime);
+    } else if (action.equals("autotimezone")) {
+      final PluginResult resultAutoTimeZone = new PluginResult(PluginResult.Status.OK, Settings.Global.getInt(cordova.getActivity().getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 0) == 1);
+      callbackContext.sendPluginResult(resultAutoTimeZone);
     }
     return true;
   }

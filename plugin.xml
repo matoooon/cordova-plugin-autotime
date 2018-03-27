@@ -32,7 +32,7 @@
     <platform name="ios">
         <js-module src="www/plugin.js" name="plugin">
             <runs/>
-            <clobbers target="AutoTimePlugin" />
+            <clobbers target="plugins.autotime" />
         </js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="AutoTimePlugin">
