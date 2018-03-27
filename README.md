@@ -12,6 +12,12 @@ $ cordova plugin add --save https://github.com/matoooon/cordova-plugin-autotime.
 
 ## Usage
 
+```js
+window.plugins.getAutoTime(function callbackSuccess(res){
+  //res true or false
+})
+
+```
 
 ## License
 
